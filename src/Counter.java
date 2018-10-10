@@ -3,7 +3,6 @@ public class Counter extends Thread {
     private Thread t;
     public Counter(Storage store){
         stored = store;
-        System.out.println("COUNTER CREADO");
     }
     public void run(){
         try{
@@ -11,7 +10,6 @@ public class Counter extends Thread {
             while (true) {
                 stored.setStored(i++);
                 Thread.sleep(1000);
-                notify();
             }
         }
         catch(InterruptedException ex){

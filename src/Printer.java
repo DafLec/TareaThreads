@@ -7,7 +7,7 @@ public class Printer extends Thread {
     public void run(){
         try{
             while (true) {
-				wait();
+                Thread.sleep(999);
                 System.out.println(stored.getStored());
             }
         }
